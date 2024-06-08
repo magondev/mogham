@@ -1,0 +1,31 @@
+.header {
+	height: 3.5rem; /* 56px / 16 = 3.5rem */
+	background-color: var(--mantine-color-body);
+	border-bottom: 0.0625rem solid var(--mantine-color-gray-3); /* 1px / 16 = 0.0625rem */
+}
+
+.inner {
+	height: 3.5rem; /* 56px / 16 = 3.5rem */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.link {
+	display: block;
+	line-height: 1;
+	padding: 0.5rem 0.75rem; /* 8px = 0.5rem, 12px = 0.75rem */
+	border-radius: var(--mantine-radius-sm);
+	text-decoration: none;
+	color: var(--mantine-color-gray-7);
+	font-size: var(--mantine-font-size-sm);
+	font-weight: 500;
+}
+
+.link:hover {
+	background-color: var(--mantine-color-gray-0);
+}
+
+.linkLabel {
+	margin-right: 0.3125rem; /* 5px / 16 = 0.3125rem */
+}
