@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Mogham - Description",
 };
 
-export default function RootLayout({
+export default function ClientFrontendLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
