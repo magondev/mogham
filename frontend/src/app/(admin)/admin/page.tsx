@@ -1,8 +1,13 @@
-export default function AdminHome()
+import { Card, Text } from "@mantine/core";
+
+export default function Dashboard()
 {
   return (
     <div>
-      ADMIN BODY
+      <Text size="xl" fw="bold">Dashboard</Text>
+      <Card withBorder>
+
+      </Card>
     </div>
   );
 }

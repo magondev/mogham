@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { createTheme, MantineProvider } from '@mantine/core'
+import { AppShell, AppShellNavbar, createTheme, MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css';
+import { AdminNavbar } from "@/components/AdminNavbar/AdminNavbar";
 
 export const metadata: Metadata = {
   title: "Mogham - Admin Panel",
@@ -18,8 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <MantineProvider>
-          ADMIN PANEL HEADER
-          {children}
+          <AdminNavbar>
+            {children}
+          </AdminNavbar>
         </MantineProvider>
       </body>
     </html>
