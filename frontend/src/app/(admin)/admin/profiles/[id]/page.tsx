@@ -4,7 +4,7 @@ export default function PeopleCRUD()
 {
   return (
     <>
-      <Text size="xl" fw="bold">Люди NEW</Text>
+      <Text size="xl" fw="bold">Профили NEW</Text>
       <Card withBorder>
 
       </Card>

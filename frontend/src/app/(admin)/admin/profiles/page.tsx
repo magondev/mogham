@@ -4,7 +4,7 @@ export default function PeopleDataTable()
 {
   return (
     <>
-      <Text size="xl" fw="bold">Люди</Text>
+      <Text size="xl" fw="bold">Профили</Text>
       <Card withBorder>
 
       </Card>

@@ -22,11 +22,11 @@ import { ReactNode } from 'react';
 const mockdata = [
   { label: 'Dashboard', icon: IconPresentationAnalytics, link: '/admin' },
   {
-    label: 'Люди',
+    label: 'Профили',
     icon: IconUser,
     links: [
-      { label: 'Новый', link: '/admin/people/new' },
-      { label: 'Все люди', link: '/admin/people' },
+      { label: 'Новый', link: '/admin/profiles/new' },
+      { label: 'Все профили', link: '/admin/profiles' },
     ],
   },
   { label: 'Запросы', icon: IconQuestionMark, link: '/admin/inquiries' },
