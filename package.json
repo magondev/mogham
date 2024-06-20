@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@mantine/dates": "^7.10.2",
+    "@tiptap/extension-highlight": "^2.4.0",
+    "@tiptap/extension-text-align": "^2.4.0",
+    "@tiptap/extension-underline": "^2.4.0",
+    "dayjs": "^1.11.11"
+  }
+}
