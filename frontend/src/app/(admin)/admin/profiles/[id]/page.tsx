@@ -56,12 +56,14 @@ export default function PeopleCRUD()
               <GridCol span={6}>
                 <TextInput
                   label="Имя и отчество"
+                  name="first-name"
                   required
                 />
               </GridCol>
               <GridCol span={6}>
                 <TextInput
                   label="Фамилия"
+                  name="last-name"
                   required
                 />
               </GridCol>
@@ -70,6 +72,7 @@ export default function PeopleCRUD()
                   value={value}
                   onChange={setValue}
                   label="Дата рождения"
+                  name="birth-date"
                   locale="ru"
                 />
               </GridCol>
@@ -82,16 +85,19 @@ export default function PeopleCRUD()
               <GridCol span={6}>
                 <TextInput
                   label="Место работы"
+                  name="workplace"
                 />
               </GridCol>
               <GridCol span={6}>
                 <TextInput
                   label="Должность"
+                  name="position"
                 />
               </GridCol>
               <GridCol span={6}>
                 <TextInput
                   label="Номер авто"
+                  name="car-number"
                 />
               </GridCol>
             </Grid>
