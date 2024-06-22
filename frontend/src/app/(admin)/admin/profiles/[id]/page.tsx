@@ -108,7 +108,7 @@ export default function PeopleCRUD()
         <Space h="xs" />
 
         <InputWrapper label="Дополнительно">
-          <RichTextEditor editor={editor} h={300}>
+          <RichTextEditor editor={editor} mih={300}>
             <RichTextEditor.Toolbar sticky stickyOffset={60}>
               <RichTextEditor.ControlsGroup>
                 <RichTextEditor.Bold />

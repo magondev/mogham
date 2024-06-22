@@ -6,7 +6,7 @@ fastify.register(cors, {
 });
 
 fastify.get("/", async (request: any, reply: any) => {
-	return "Änderung 1234 ASDF WWE";
+	return "Änderung 1234 ASDF WWE ASDF";
 });
 
 // Konfiguration für den Server

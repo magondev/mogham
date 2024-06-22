@@ -1,0 +1,23 @@
+# Verwende das offizielle Node.js Image als Basis
+FROM node:latest
+
+# Setze das Arbeitsverzeichnis innerhalb des Containers
+WORKDIR /usr/src/app
+
+# Kopiere package.json und package-lock.json in das Arbeitsverzeichnis
+COPY package*.json ./
+
+# Installiere Abhängigkeiten
+RUN npm install
+
+# Kopiere den Rest des Codes in das Arbeitsverzeichnis
+COPY . .
+
+# Kompiliere TypeScript (wenn benötigt)
+RUN npm run build
+
+# Expose den Port, auf dem deine API läuft
+EXPOSE 3001
+
+# Starte die Node.js-Anwendung
+CMD ["npm", "start"]
