@@ -37,21 +37,7 @@ export default function PeopleCRUD()
       <Text size="xl" fw="bold">Профили NEW</Text>
       <Card withBorder>
         <Grid>
-          <GridCol span={4}>
-            <InputWrapper label="Фото" maw={320}>
-              <Paper bg="lightgray" shadow="xs" radius="md" w="100%" maw={320}>
-                <Stack justify="center" align="center" mih={300}>
-                  <IconUserCircle size="100%" color="white" stroke={1} />
-                </Stack>
-              </Paper>
-
-              <Button justify="start" leftSection={<IconPhotoPlus size={16} />} variant="default" mt={16}>
-                Добавить фото
-              </Button>
-            </InputWrapper>
-          </GridCol>
-
-          <GridCol span={8}>
+          <GridCol span={7}>
             <Grid>
               <GridCol span={6}>
                 <TextInput
@@ -102,6 +88,20 @@ export default function PeopleCRUD()
               </GridCol>
             </Grid>
           </GridCol>
+          <GridCol span={4} offset={1}>
+            <InputWrapper label="Фото" maw={320}>
+              <Paper bg="lightgray" shadow="xs" radius="md" w="100%" maw={320}>
+                <Stack justify="center" align="center" mih={300}>
+                  <IconUserCircle size="100%" color="white" stroke={1} />
+                </Stack>
+              </Paper>
+
+              <Button justify="start" leftSection={<IconPhotoPlus size={16} />} variant="default" mt={16}>
+                Добавить фото
+              </Button>
+            </InputWrapper>
+          </GridCol>
+
         </Grid>
 
         <Space h="xl" />
