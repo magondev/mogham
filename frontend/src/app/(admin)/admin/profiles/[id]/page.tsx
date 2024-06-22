@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, Container, FileButton, Grid, GridCol, Group, InputWrapper, Paper, Space, Stack, Text, TextInput } from "@mantine/core";
+import { Button, Card, Container, Image, FileButton, Grid, GridCol, Group, InputWrapper, Paper, Space, Stack, Text, TextInput } from "@mantine/core";
 import { IconPhoto, IconPhotoPlus, IconUpload, IconUserCircle, IconX } from "@tabler/icons-react";
 import { ReactNode, useState } from "react";
 import '@mantine/dates/styles.css'
@@ -20,7 +20,8 @@ import { DateInput } from '@mantine/dates';
 
 export default function PeopleCRUD()
 {
-  const [file, setFile] = useState<File | null>(null);
+  const [profilePicture, setProfilePicture] = useState<File | null>(null);
+  const [mediaFiles, setMediaFiles] = useState<File[]>([]);
   const [value, setValue] = useState<Date | null>(null);
   const editor = useEditor({
     extensions: [
@@ -90,15 +91,26 @@ export default function PeopleCRUD()
           </GridCol>
           <GridCol span={4} offset={1}>
             <InputWrapper label="Фото" maw={320}>
-              <Paper bg="lightgray" shadow="xs" radius="md" w="100%" maw={320}>
-                <Stack justify="center" align="center" mih={300}>
-                  <IconUserCircle size="100%" color="white" stroke={1} />
-                </Stack>
-              </Paper>
+              {!profilePicture && (
+                <Paper bg="lightgray" radius="md" w="100%" maw={320}>
+                  <Stack justify="center" align="center" mih={300}>
+                    <IconUserCircle size="100%" color="white" stroke={1} />
+                  </Stack>
+                </Paper>
+              )}
 
-              <Button justify="start" leftSection={<IconPhotoPlus size={16} />} variant="default" mt={16}>
-                Добавить фото
-              </Button>
+
+              {profilePicture && (
+                <Image src={URL.createObjectURL(profilePicture)} radius="md" />)}
+
+
+
+
+              <FileButton onChange={setProfilePicture} accept="image/png,image/jpeg">
+                {(props) => <Button {...props} justify="start" leftSection={<IconPhotoPlus size={16} />} variant="default" mt={16}>
+                  {profilePicture ? "Изменить фото" : "Добавить фото"}
+                </Button>}
+              </FileButton>
             </InputWrapper>
           </GridCol>
 
